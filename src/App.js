@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.scss";
 import Pic from "./images/icon-star.svg";
+import Ty from "./images/illustration-thank-you.svg";
 function App() {
     const option = [1, 2, 3, 4, 5];
     const [selectedOption, setSelectedOption] = useState(null);
@@ -57,7 +58,21 @@ function App() {
                         </>
                     ) : (
                         <>
-                            <h1>Thankyou</h1>
+                            <div className="submit__container">
+                                <div className="submit__content">
+                                    <img
+                                        src={Ty}
+                                        alt=""
+                                    />
+                                    <span>{`You selected ${selectedOption} out of 5`}</span>
+                                    <h1>Thank you!</h1>
+                                    <p>
+                                        We appreciate you taking the time to
+                                        give a rating. If you ever need more
+                                        support, don't hesitate to get in touch!
+                                    </p>
+                                </div>
+                            </div>
                         </>
                     )}
                 </div>
